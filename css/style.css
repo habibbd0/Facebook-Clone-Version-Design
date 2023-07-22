@@ -1,0 +1,1195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,200;1,300;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #E0E2E6;
+  background: #18191A;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #242526;
+  padding: 7px;
+  border-bottom: 2px solid #3A3B3C;
+}
+header nav {
+  cursor: pointer;
+  width: 98%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+header nav .brand-name h1 {
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+header nav .search-people {
+  width: 400px;
+  padding: 10px;
+  background: #393A3B;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+}
+header nav .search-people:hover {
+  background: #4E4F50;
+}
+header nav .search-people i {
+  font-size: 16px;
+}
+header nav .search-people input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin: 0 10px;
+  font-size: 15px;
+}
+header nav .search-people ::-moz-placeholder {
+  font-size: 14px;
+  color: #B8BBBF;
+}
+header nav .search-people ::placeholder {
+  font-size: 14px;
+  color: #B8BBBF;
+}
+header nav .header-icon {
+  gap: 50px;
+}
+header nav .header-icon ul {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+header nav .header-icon ul li {
+  position: relative;
+}
+header nav .header-icon ul li .icons {
+  position: relative;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  background: #3A3B3C;
+  transition: 0.3s all ease;
+}
+header nav .header-icon ul li .icons:hover {
+  background: #4E4F50;
+}
+header nav .header-icon ul li .icons span {
+  font-size: 12px;
+  position: absolute;
+  background: red;
+  padding: 0 5px;
+  border-radius: 50px;
+  bottom: 28px;
+  left: 23px;
+}
+header nav .header-icon ul li .admin img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 2px solid #FFFFFF;
+}
+header nav .header-icon ul li .admin i {
+  position: absolute;
+  font-size: 16px;
+  border-radius: 50px;
+  top: 32px;
+  right: 22px;
+  background: #3A3B3C;
+  transition: 0.3s all ease;
+}
+header nav .header-icon ul li .admin i:hover {
+  background: #4E4F50;
+}
+header nav .header-icon ul li .fb-message {
+  z-index: 999;
+  position: absolute;
+  width: 380px;
+  height: 100vh;
+  overflow: auto;
+  background: #242526;
+  top: 52px;
+  right: -110px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+header nav .header-icon ul li .fb-message.active {
+  opacity: 1;
+  visibility: visible;
+}
+header nav .header-icon ul li .fb-message .message-header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px 14px;
+}
+header nav .header-icon ul li .fb-message .message-header .item h3 {
+  font-size: 25px;
+}
+header nav .header-icon ul li .fb-message .message-header .item ul li {
+  display: flex;
+  align-items: center;
+}
+header nav .header-icon ul li .fb-message .message-header .item ul li i {
+  font-size: 22px;
+  padding: 8px;
+  border-radius: 50px;
+}
+header nav .header-icon ul li .fb-message .message-header .item ul li i:hover {
+  background: #3A3B3C;
+}
+header nav .header-icon ul li .fb-message .user-search {
+  margin-left: 15px;
+  padding: 10px;
+  width: 350px;
+  height: auto;
+  display: flex;
+  text-align: center;
+  background: #3A3B3C;
+  border-radius: 30px;
+}
+header nav .header-icon ul li .fb-message .user-search i {
+  font-size: 18px;
+}
+header nav .header-icon ul li .fb-message .user-search input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  margin: 0 10px;
+  font-size: 16px;
+}
+header nav .header-icon ul li .fb-message .user-search ::-moz-placeholder {
+  color: #B8BBBF;
+}
+header nav .header-icon ul li .fb-message .user-search ::placeholder {
+  color: #B8BBBF;
+}
+header nav .header-icon ul li .fb-message .inbox-communities {
+  display: flex;
+  text-align: center;
+  gap: 3rem;
+  padding: 7px 15px;
+}
+header nav .header-icon ul li .fb-message .inbox-communities h4 {
+  font-size: 18px;
+  padding: 10px;
+  background: #263951;
+  color: #4395FF;
+  border-radius: 30px;
+}
+header nav .header-icon ul li .fb-message .inbox-communities h4:hover {
+  background: #3C4D63;
+}
+header nav .header-icon ul li .fb-message .inbox-communities span {
+  font-size: 17px;
+  padding: 10px 15px;
+  border-radius: 30px;
+}
+header nav .header-icon ul li .fb-message .inbox-communities span:hover {
+  background: #393A3B;
+}
+header nav .header-icon ul li .fb-message .chat {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  gap: 0.4rem;
+  transition: 0.4s all ease;
+  position: relative;
+}
+header nav .header-icon ul li .fb-message .chat:hover {
+  background: #3A3B3C;
+}
+header nav .header-icon ul li .fb-message .chat .user-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  position: relative;
+}
+header nav .header-icon ul li .fb-message .chat .user-img span {
+  position: absolute;
+  background: #46AB5E;
+  padding: 8px;
+  top: 50px;
+  left: 54px;
+  border-radius: 50px;
+  outline: 2px solid #242526;
+}
+header nav .header-icon ul li .fb-message .chat .user-name h5 {
+  font-size: 18px;
+}
+header nav .header-icon ul li .fb-message .chat .user-name span {
+  font-size: 14px;
+  color: #ACBBA2;
+}
+header nav .header-icon ul li .fb-message .chat:hover .more {
+  opacity: 1;
+  visibility: visible;
+}
+header nav .header-icon ul li .fb-message .chat .more {
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  background: #393A3B;
+  outline: 2px solid #4E4F50;
+  padding: 3px 5px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+}
+header nav .header-icon ul li .fb-message .chat .more i {
+  font-size: 22px;
+}
+header nav .header-icon ul li .fb-notification {
+  position: absolute;
+  width: 380px;
+  height: 100vh;
+  overflow: auto;
+  background: #242526;
+  top: 52px;
+  right: -60px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+header nav .header-icon ul li .fb-notification.active {
+  opacity: 1;
+  visibility: visible;
+}
+header nav .header-icon ul li .fb-notification .noti-main {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+header nav .header-icon ul li .fb-notification .noti-main i {
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 50px;
+}
+header nav .header-icon ul li .fb-notification .noti-main i:hover {
+  background: #4E4F50;
+}
+header nav .header-icon ul li .fb-notification .noti-header {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+header nav .header-icon ul li .fb-notification .noti-header h4 {
+  font-size: 16px;
+}
+header nav .header-icon ul li .fb-notification .noti-header span {
+  color: #2466bd;
+  padding: 5px;
+}
+header nav .header-icon ul li .fb-notification .noti-header span:hover {
+  background: #3A3B3C;
+}
+header nav .header-icon ul li .fb-notification .notification {
+  display: flex;
+  gap: 0.4rem;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+header nav .header-icon ul li .fb-notification .notification:hover {
+  background: #3A3B3C;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  position: relative;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-img i {
+  position: absolute;
+  bottom: 35px;
+  left: 55px;
+  color: #2466bd;
+  font-size: 20px;
+  background: #4395FF;
+  color: #E0E2E6;
+  padding: 3px;
+  border-radius: 50px;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-img .love {
+  background: red;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-img .comment {
+  background: #46AB5E;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-name {
+  margin-top: -3px;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-name p {
+  font-size: 14px;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-name p span {
+  font-size: 18px;
+  font-weight: 500;
+}
+header nav .header-icon ul li .fb-notification .notification .noti-name p small {
+  font-size: 14px;
+  color: #2466bd;
+}
+header nav .header-icon ul li .fb-profile {
+  position: absolute;
+  width: 380px;
+  height: 75vh;
+  overflow: auto;
+  top: 55px;
+  right: 0px;
+  background: #242526;
+  padding: 10px 15px;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+header nav .header-icon ul li .fb-profile.active {
+  opacity: 1;
+  visibility: visible;
+}
+header nav .header-icon ul li .fb-profile h1 {
+  background: #3A3B3C;
+  padding: 1px;
+  margin: 5px 0;
+}
+header nav .header-icon ul li .fb-profile .profile-header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .header-icon ul li .fb-profile .profile-header:hover {
+  background: #393A3B;
+  border-radius: 10px;
+}
+header nav .header-icon ul li .fb-profile .profile-header .img-thum {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+header nav .header-icon ul li .fb-profile .profile-header .img-thum img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  outline: 1.5px solid #E0E2E6;
+}
+header nav .header-icon ul li .fb-profile .profile-header .img-thum h3 {
+  font-size: 20px;
+}
+header nav .header-icon ul li .fb-profile .profile-header .page img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  outline: 1px solid #B8BBBF;
+}
+header nav .header-icon ul li .fb-profile .profile-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+header nav .header-icon ul li .fb-profile .profile-main:hover {
+  background: #393A3B;
+  border-radius: 10px;
+}
+header nav .header-icon ul li .fb-profile .profile-main h5 {
+  font-size: 16px;
+  color: #2466bd;
+}
+header nav .header-icon ul li .fb-profile .profile-main span {
+  background: red;
+  padding: 0px 5px;
+  border-radius: 50%;
+}
+header nav .header-icon ul li .fb-profile h6 {
+  background: rgb(26, 25, 25);
+  padding: 2px;
+  margin: 5px 0;
+}
+header nav .header-icon ul li .fb-profile .profile-detlis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 5px;
+}
+header nav .header-icon ul li .fb-profile .profile-detlis:hover {
+  background: #393A3B;
+  border-radius: 10px;
+}
+header nav .header-icon ul li .fb-profile .profile-detlis .detlis-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+header nav .header-icon ul li .fb-profile .profile-detlis .detlis-main i {
+  font-size: 26px;
+  background-color: #3A3B3C;
+  padding: 4px 6px;
+  border-radius: 50px;
+}
+header nav .header-icon ul li .fb-profile .profile-detlis .detlis-main h4 {
+  font-size: 15px;
+  color: #B8BBBF;
+}
+header nav .header-icon ul li .fb-profile .profile-detlis .arrow i {
+  font-size: 35px;
+}
+header nav .header-icon ul li .fb-profile .profile-end span {
+  font-size: 15px;
+  color: #B8BBBF;
+}
+
+.wrap {
+  width: 100%;
+  position: relative;
+}
+.wrap .left-sidebar {
+  top: 63px;
+  position: fixed;
+  width: 340px;
+  height: 100vh;
+  overflow: auto;
+  left: 0;
+  background: #18191A;
+  padding: 10px 20px 80px;
+}
+.wrap .left-sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.wrap .left-sidebar::-webkit-scrollbar-track {
+  background: #393A3B;
+}
+.wrap .left-sidebar::-webkit-scrollbar-thumb {
+  background: #B8BBBF;
+  border-radius: 10px;
+}
+.wrap .left-sidebar ul li {
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.2s all ease;
+}
+.wrap .left-sidebar ul li:hover {
+  background: #3A3B3C;
+}
+.wrap .left-sidebar ul li .flex {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wrap .left-sidebar ul li .flex i {
+  color: #2466bd;
+  font-size: 24px;
+}
+.wrap .left-sidebar ul li .flex h4 {
+  font-size: 14px;
+}
+.wrap .left-sidebar ul li .flex img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  outline: 1px solid #FFFFFF;
+}
+.wrap .left-sidebar ul li .flex-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px;
+}
+.wrap .left-sidebar ul li .flex-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+.wrap .left-sidebar ul li .flex-item i {
+  background: #3A3B3C;
+  padding: 12px;
+  color: #B8BBBF;
+  border-radius: 30px;
+  font-size: 24px;
+}
+.wrap .left-sidebar ul li .flex-item h4 {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.wrap .left-sidebar ul li .flex-end {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wrap .left-sidebar ul li .flex-end img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+.wrap .left-sidebar ul li .flex-end h3 {
+  font-size: 16px;
+}
+.wrap .left-sidebar h1 {
+  background: #3A3B3C;
+  padding: 1px;
+  margin: 5px;
+}
+.wrap .left-sidebar .left-sd-end a {
+  font-size: 16px;
+  color: #4E4F50;
+}
+.wrap .right-sidebar {
+  z-index: -1;
+  top: 63px;
+  position: fixed;
+  width: 350px;
+  height: 100vh;
+  overflow: auto;
+  right: 0;
+  background: #18191A;
+  padding: 10px 20px 70px;
+}
+.wrap .right-sidebar .right-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .right-sidebar .right-header h3 {
+  font-size: 15px;
+}
+.wrap .right-sidebar .right-header i {
+  cursor: pointer;
+  transition: 0.4s all ease;
+  font-size: 24px;
+  border-radius: 50%;
+  padding: 5px 7px;
+}
+.wrap .right-sidebar .right-header i:hover {
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .rs-admin {
+  margin: 10px 0;
+}
+.wrap .right-sidebar .rs-admin .flex {
+  cursor: pointer;
+  transition: 0.4s all ease;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+.wrap .right-sidebar .rs-admin .flex:hover {
+  background: #4E4F50;
+}
+.wrap .right-sidebar .rs-admin .flex img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: 1px solid #B8BBBF;
+}
+.wrap .right-sidebar .rs-admin .flex h5 {
+  font-size: 18px;
+}
+.wrap .right-sidebar .rs-admin ul li {
+  cursor: pointer;
+  transition: 0.3s all ease;
+  border-radius: 5px;
+}
+.wrap .right-sidebar .rs-admin ul li:hover {
+  background: #4E4F50;
+}
+.wrap .right-sidebar .rs-admin ul li .flex-info {
+  display: flex;
+  gap: 0.7rem;
+  margin: 0 25px;
+  padding: 5px 0;
+}
+.wrap .right-sidebar .rs-admin ul li .flex-info i {
+  color: #B8BBBF;
+  font-size: 18px;
+}
+.wrap .right-sidebar .rs-admin ul li .flex-info span {
+  font-size: 15px;
+  color: #B8BBBF;
+}
+.wrap .right-sidebar .request .request-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap .right-sidebar .request .request-header h3 {
+  color: #E4E6EB;
+  font-size: 18px;
+}
+.wrap .right-sidebar .request .request-header span {
+  cursor: pointer;
+  transition: 0.8s all ease;
+  color: #2466bd;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.wrap .right-sidebar .request .request-header span:hover {
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .request .user-request {
+  cursor: pointer;
+  transition: 0.2s all ease;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+.wrap .right-sidebar .request .user-request:hover {
+  background: #303031;
+}
+.wrap .right-sidebar .request .user-request .user-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.wrap .right-sidebar .request .user-request .user-info {
+  position: relative;
+}
+.wrap .right-sidebar .request .user-request .user-info .mutual {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wrap .right-sidebar .request .user-request .user-info .mutual .img-thumb {
+  display: flex;
+  align-items: center;
+}
+.wrap .right-sidebar .request .user-request .user-info .mutual .img-thumb img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: 1px solid #242526;
+}
+.wrap .right-sidebar .request .user-request .user-info .mutual .img-thumb img:last-child {
+  margin-left: -5px;
+}
+.wrap .right-sidebar .request .user-request .user-info .mutual span {
+  font-size: 12px;
+}
+.wrap .right-sidebar .request .user-request .user-info .real-request {
+  display: flex;
+  gap: 2rem;
+  margin: 10px 0;
+}
+.wrap .right-sidebar .request .user-request .user-info .real-request button {
+  padding: 10px 20px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.wrap .right-sidebar .request .user-request .user-info .real-request button:first-child {
+  background: #4395FF;
+}
+.wrap .right-sidebar .request .user-request .user-info .real-request button:last-child {
+  transition: 0.4s all ease;
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .request .user-request .user-info .real-request button:last-child:hover {
+  background: #4E4F50;
+}
+.wrap .right-sidebar .request .user-request .user-info small {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0px;
+}
+.wrap .right-sidebar h2 {
+  font-weight: 400;
+  margin-top: 25px;
+}
+.wrap .right-sidebar .user-girft {
+  transition: 0.4s all ease;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.wrap .right-sidebar .user-girft:hover {
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .user-girft i {
+  font-size: 35px;
+  color: #4395FF;
+}
+.wrap .right-sidebar .user-girft h4 {
+  font-weight: 400;
+  font-size: 17px;
+}
+.wrap .right-sidebar .user-girft h4 span {
+  font-weight: 400;
+  font-size: 14px;
+}
+.wrap .right-sidebar .rs-contacts .contact-header {
+  margin-bottom: 10px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.wrap .right-sidebar .rs-contacts .contact-header .contact-icon {
+  display: flex;
+  gap: 1.5rem;
+}
+.wrap .right-sidebar .rs-contacts .contact-header .contact-icon i {
+  font-size: 18px;
+  transition: 0.5s all ease;
+  padding: 5px 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.wrap .right-sidebar .rs-contacts .contact-header .contact-icon i:hover {
+  background: #393A3B;
+}
+.wrap .right-sidebar .rs-contacts .re-user ul li {
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s all ease;
+  padding: 9px 7px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wrap .right-sidebar .rs-contacts .re-user ul li:hover {
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .rs-contacts .re-user ul li img {
+  outline: 1.5px solid #4395FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.wrap .right-sidebar .rs-contacts .re-user span {
+  top: -30px;
+  left: 15px;
+  position: absolute;
+  font-size: 50px;
+  color: #46AB5E;
+  padding: 10px;
+}
+.wrap .right-sidebar .rs-group h2 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.wrap .right-sidebar .rs-group ul li {
+  cursor: pointer;
+}
+.wrap .right-sidebar .rs-group ul li .rs-gp-info {
+  padding: 5px 7px;
+  border-radius: 10px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wrap .right-sidebar .rs-group ul li .rs-gp-info:hover {
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .rs-group ul li .rs-gp-info img {
+  outline: 1.5px solid #4395FF;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.wrap .right-sidebar .rs-end {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 20px;
+  transition: 0.4s all ease;
+  padding: 8px;
+  border-radius: 10px;
+}
+.wrap .right-sidebar .rs-end:hover {
+  background: #3A3B3C;
+}
+.wrap .right-sidebar .rs-end i {
+  font-size: 22px;
+  background: #4E4F50;
+  padding: 8px;
+  border-radius: 50%;
+}
+.wrap .right-sidebar .rs-end h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.middle {
+  width: 38%;
+  height: 100vh;
+  margin: auto;
+  padding: 90px 0;
+}
+.middle .story-section {
+  background: #242526;
+  padding: 12px 15px;
+  border-radius: 10px;
+}
+.middle .story-section .story-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.middle .story-section .story-header .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  position: relative;
+}
+.middle .story-section .story-header .flex:first-child {
+  color: #2466bd;
+}
+.middle .story-section .story-header .flex:first-child ::after {
+  content: "";
+  left: -69px;
+  bottom: -12px;
+  border-bottom: 3px solid #2466bd;
+  position: absolute;
+  width: 280%;
+}
+.middle .story-section .story-header .flex i {
+  font-size: 22px;
+  color: #2466bd;
+}
+.middle .story-section .story-body {
+  padding: 20px 0;
+}
+.middle .story-section .story-body ul {
+  width: 100%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.7rem;
+}
+.middle .story-section .story-body ul li {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px;
+  background: transparent;
+  cursor: pointer;
+}
+.middle .story-section .story-body ul li:hover .user-img-thumb .user-story-img {
+  transform: scale(1.05);
+}
+.middle .story-section .story-body ul li .admin-img-thumb {
+  position: relative;
+  border-radius: 10px;
+}
+.middle .story-section .story-body ul li .admin-img-thumb img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.middle .story-section .story-body ul li .admin-img-thumb i {
+  font-size: 18px;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px;
+  background: #2466bd;
+  border-radius: 50%;
+  outline: 3px solid #242526;
+}
+.middle .story-section .story-body ul li .admin-create-story {
+  margin: 12px 0;
+  text-align: center;
+}
+.middle .story-section .story-body ul li .admin-create-story span {
+  font-size: 13px;
+}
+.middle .story-section .story-body ul li .user-img-thumb {
+  position: relative;
+  height: 100%;
+}
+.middle .story-section .story-body ul li .user-img-thumb::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: block;
+}
+.middle .story-section .story-body ul li .user-img-thumb .user-story-img {
+  transition: 0.3s all ease;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.middle .story-section .story-body ul li .user-img-thumb .user-profile-img {
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  outline: 3px solid #242526;
+}
+.middle .story-section .story-body ul li .user-img-thumb .user-name {
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+.middle .story-section .story-body ul li .user-img-thumb span {
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.middle .write-post {
+  background: #242526;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.middle .write-post .post-header {
+  display: flex;
+  gap: 1rem;
+}
+.middle .write-post .post-header img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.middle .write-post .post-header input {
+  width: 100%;
+  background: #3A3B3C;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  border-radius: 30px;
+  display: block;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.4s all ease;
+}
+.middle .write-post .post-header input:hover {
+  background: #4E4F50;
+}
+.middle .write-post hr {
+  margin: 10px 15px;
+  color: #4E4F50;
+}
+.middle .write-post .post-footer ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.middle .write-post .post-footer ul li .flex {
+  transition: 0.2s all ease;
+  padding: 5px 10px;
+  margin-left: 8px;
+  border-radius: 10px;
+}
+.middle .write-post .post-footer ul li .flex:hover {
+  background: #3A3B3C;
+}
+.middle .write-post .post-footer ul li .flex i {
+  color: #46AB5E;
+  font-size: 23px;
+}
+.middle .write-post .post-footer ul li .flex span {
+  font-size: 15px;
+  color: #B8BBBF;
+}
+.middle .write-post .post-footer ul li:first-child i {
+  color: red;
+}
+.middle .write-post .post-footer ul li:last-child i {
+  color: burlywood;
+}
+.middle .public-post .fb-post-start {
+  background: #242526;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+.middle .public-post .fb-post-start .fb-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-user-in {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-user-in img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-user-in h3 {
+  font-size: 20px;
+  color: #B8BBBF;
+  font-weight: 400;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-user-in h3 span {
+  font-size: 14px;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-post-icon {
+  display: flex;
+  gap: 1rem;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-post-icon i {
+  transition: all 0.4s ease;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 50%;
+}
+.middle .public-post .fb-post-start .fb-post-header .fb-post-icon i:hover {
+  background: #4E4F50;
+}
+.middle .public-post .fb-post-start .user-post .caption {
+  font-size: 16px;
+  margin: 5px 0px 10px;
+}
+.middle .public-post .fb-post-start .user-post .user-img img {
+  width: 100%;
+  height: 100%;
+}
+.middle .public-post .fb-post-start .user-post .react {
+  display: flex;
+  justify-content: space-between;
+}
+.middle .public-post .fb-post-start .user-post .react .other-react ul {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.middle .public-post .fb-post-start .user-post .react .other-react ul li .like {
+  width: 20px;
+  height: 20px;
+}
+.middle .public-post .fb-post-start .user-post .react .other-react ul li span {
+  font-size: 16px;
+  margin-left: 0.3rem;
+}
+.middle .public-post .fb-post-start .user-post .react .comment {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+.middle .public-post .fb-post-start .user-post hr {
+  margin: 10px;
+  color: #3A3B3C;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .react-part {
+  transition: 0.5s all ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 8px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .react-part:hover {
+  background: #3A3B3C;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .react-part span {
+  font-size: 14px;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .react-part i {
+  font-size: 20px;
+}
+.middle .public-post .fb-post-start .user-post hr {
+  background: #393A3B;
+  margin: 4px 0 15px;
+}
+.middle .public-post .fb-post-start .user-post .comment-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.middle .public-post .fb-post-start .user-post .comment-section .comment-img img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50PX;
+}
+.middle .public-post .fb-post-start .user-post .comment-section .comment-write {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 10PX 0PX;
+  border: none;
+  background: #3A3B3C;
+  border-radius: 30px;
+}
+.middle .public-post .fb-post-start .user-post .comment-section .comment-write input {
+  background: none;
+  border: none;
+  color: #B8BBBF;
+  font-size: 16px;
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */
