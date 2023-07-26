@@ -1084,11 +1084,13 @@ header nav .header-icon ul li .fb-profile .profile-end span {
   border-radius: 50%;
 }
 .middle .public-post .fb-post-start .fb-post-header .fb-user-in h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #B8BBBF;
   font-weight: 400;
+  cursor: pointer;
 }
 .middle .public-post .fb-post-start .fb-post-header .fb-user-in h3 span {
+  cursor: pointer;
   font-size: 14px;
 }
 .middle .public-post .fb-post-start .fb-post-header .fb-post-icon {
@@ -1100,6 +1102,7 @@ header nav .header-icon ul li .fb-profile .profile-end span {
   font-size: 22px;
   padding: 5px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .middle .public-post .fb-post-start .fb-post-header .fb-post-icon i:hover {
   background: #4E4F50;
@@ -1145,6 +1148,28 @@ header nav .header-icon ul li .fb-profile .profile-end span {
   align-items: center;
   justify-content: space-around;
 }
+.middle .public-post .fb-post-start .user-post .react-box ul li {
+  position: relative;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .reaction-hover {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  top: -45px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all ease;
+  transform: translateY(10PX);
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .reaction-hover img {
+  width: 38px;
+}
+.middle .public-post .fb-post-start .user-post .react-box ul li .reaction-hover img:hover {
+  transform: scale(1.3);
+  transition: all 0.2s ease;
+}
 .middle .public-post .fb-post-start .user-post .react-box ul li .react-part {
   transition: 0.5s all ease;
   display: flex;
@@ -1163,9 +1188,14 @@ header nav .header-icon ul li .fb-profile .profile-end span {
 .middle .public-post .fb-post-start .user-post .react-box ul li .react-part i {
   font-size: 20px;
 }
+.middle .public-post .fb-post-start .user-post .react-box ul li:hover .reaction-hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 .middle .public-post .fb-post-start .user-post hr {
   background: #393A3B;
-  margin: 4px 0 15px;
+  margin: 4px 0 5px;
 }
 .middle .public-post .fb-post-start .user-post .comment-section {
   display: flex;
